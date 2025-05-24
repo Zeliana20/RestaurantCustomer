@@ -24,33 +24,29 @@
             width: 250px;
             height: 100vh;
             background-color: #fff;
-            box-shadow: rgba(50, 50, 93, 0.15) 0px 2px 5px 0px,
-                        rgba(0, 0, 0, 0.05) 0px 1px 3px 0px;
+            box-shadow:
+                rgba(50, 50, 93, 0.15) 0px 2px 5px 0px,
+                rgba(0, 0, 0, 0.05) 0px 1px 3px 0px;
             padding: 20px;
             position: fixed;
             left: 0;
             top: 0;
-            z-index: 1000;
         }
 
         .logo {
             display: flex;
             align-items: center;
             margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
         }
 
         .logo img {
             height: 30px;
-            width: auto;
             margin-right: 10px;
         }
 
         .logo h1 {
             font-size: 1.2rem;
-            font-weight: 600;
-            background: linear-gradient(to right, #b58029 0%, #d6a163 100%);
+            background: linear-gradient(to right, #a05a2c 0%, #7b3f1d 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -62,29 +58,22 @@
         }
 
         .sidebar ul li {
-            margin-bottom: 8px;
+            margin-bottom: 20px;
         }
 
         .sidebar ul li a {
             text-decoration: none;
-            color: #333;
+            color: #4b2e1f;
             font-size: 0.95rem;
             font-weight: 400;
-            padding: 12px 16px;
-            border-radius: 8px;
+            padding: 8px 12px;
+            border-radius: 6px;
             display: block;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s;
         }
 
         .sidebar ul li a:hover {
-            background-color: #f0f0f0;
-            color: #f45e01;
-            transform: translateX(5px);
-        }
-
-        .sidebar ul li a.active {
-            background: linear-gradient(135deg, #b58029 0%, #d6a163 100%);
-            color: white;
+            background-color: #f0eae4;
         }
 
         /* Content */
@@ -164,7 +153,6 @@
             gap: 10px;
         }
 
-
         .feedback-form button,
         .feedback-form a.cancel-btn {
             flex: 1;
@@ -176,36 +164,24 @@
         }
 
         .feedback-form button {
-            background: linear-gradient(135deg, #8b5a3c, #d4a574);
+            background-color: #a05a2c;
             color: white;
             border: none;
             cursor: pointer;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
         }
 
-
         .feedback-form button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(139, 90, 60, 0.3);
+            background-color: #7b3f1d;
         }
 
         .feedback-form a.cancel-btn {
             background-color: #f3f3f3;
             color: #5c3b22;
-            border: none;
-            cursor: pointer;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
+            border: 1px solid #ccc;
         }
 
         .feedback-form a.cancel-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(187, 175, 168, 0.3);
+            background-color: #e2d8d0;
         }
     </style>
 </head>
@@ -215,14 +191,14 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="logo">
+            <img src="assets/Logo64x64.png" alt="logo" />
             <h1>Restaurant</h1>
         </div>
         <ul>
             <li><a href="{{ route('dashboard') }}">Home</a></li>
-            <li><a href="{{ route('menu') }}">Menu</a></li>
+            <li><a href="#">Menu and Order</a></li>
             <li><a href="{{ route('reservation.form') }}">Reservation</a></li>
             <li><a href="{{ route('feedback.form') }}">Feedback</a></li>
-            <li><a href="{{ route('payment.form') }}">Pembayaran</a></li>
             <li><a href="#">Logout</a></li>
         </ul>
     </div>

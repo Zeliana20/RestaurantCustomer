@@ -29,15 +29,12 @@
             position: fixed;
             left: 0;
             top: 0;
-            z-index: 1000;
         }
 
         .logo {
             display: flex;
             align-items: center;
             margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
         }
 
         .logo img {
@@ -48,8 +45,7 @@
 
         .logo h1 {
             font-size: 1.2rem;
-            font-weight: 600;
-            background: linear-gradient(to right, #b58029 0%, #d6a163 100%);
+            background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -61,29 +57,22 @@
         }
 
         .sidebar ul li {
-            margin-bottom: 8px;
+            margin-bottom: 20px;
         }
 
         .sidebar ul li a {
             text-decoration: none;
-            color: #333;
+            color: #000;
             font-size: 0.95rem;
             font-weight: 400;
-            padding: 12px 16px;
-            border-radius: 8px;
+            padding: 8px 12px;
+            border-radius: 6px;
             display: block;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s;
         }
 
         .sidebar ul li a:hover {
             background-color: #f0f0f0;
-            color: #f45e01;
-            transform: translateX(5px);
-        }
-
-        .sidebar ul li a.active {
-            background: linear-gradient(135deg, #b58029 0%, #d6a163 100%);
-            color: white;
         }
 
         /* Content */
@@ -102,22 +91,6 @@
             font-family: "Poppins", sans-serif;
             font-size: 0.95rem;
         }
-
-        .floating-button {
-            background: linear-gradient(135deg, #8b5a3c, #d4a574);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            padding: 10px 25px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .floating-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-        }
     </style>
 </head>
 
@@ -126,14 +99,14 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="logo">
+            <img src="assets/Logo64x64.png" alt="logo" />
             <h1>Restaurant</h1>
         </div>
         <ul>
             <li><a href="{{ route('dashboard') }}">Home</a></li>
-            <li><a href="{{ route('menu') }}">Menu</a></li>
+            <li><a href="#">Menu and Order</a></li>
             <li><a href="{{ route('reservation.form') }}">Reservation</a></li>
             <li><a href="{{ route('feedback.form') }}">Feedback</a></li>
-            <li><a href="{{ route('payment.form') }}">Pembayaran</a></li>
             <li><a href="#">Logout</a></li>
         </ul>
     </div>
@@ -178,12 +151,10 @@
             </div>
 
             <div style="grid-column: 1 / -1; text-align: center;">
-                <button class="floating-button" type="submit">Pesan Sekarang</button>
+                <button type="submit"
+                    style="padding: 10px 25px; background: #7b3f1d; color: white; border: none; border-radius: 5px; cursor: pointer;">Pesan Sekarang</button>
             </div>
-
-
-    </div>
-    </form>
+        </form>
     </div>
 
 
